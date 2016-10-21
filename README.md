@@ -7,7 +7,6 @@ disagreements will be settled via trial by combat.
 
 ### Engineering
 
-+ [Elixir](https://github.com/DockYard/styleguides/blob/master/engineering/elixir.md)
 + [Ember](https://github.com/DockYard/styleguides/blob/master/engineering/ember.md)
 + [Handlebars](https://github.com/DockYard/styleguides/blob/master/engineering/handlebars.md)
 + [JavaScript](https://github.com/DockYard/styleguides/blob/master/engineering/javascript.md)
