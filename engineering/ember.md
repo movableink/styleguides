@@ -8,6 +8,7 @@
 * [Controllers](#controllers)
 * [Templates](#templates)
 * [Routing](#routing)
+* [Runloop](#runloop)
 * [Ember data](#ember-data)
 
 
@@ -391,6 +392,32 @@ down in a form, you don't want to render this page without the options
 in the dropdown. A counter example would be comments on a page. The
 comments should be fetched along side the model, but should not block
 your page from loading if the required model is there.
+
+## Runloop
+
+### `afterRender`
+When scheduling future work that will run after a component finishes rendering,
+consider using `run.scheduleOnce` instead of `run.next`.
+
+While both achieve the same result, the former is much clearer than the latter in intention,
+along with other important benefits (referenced in the docs below)
+
+e.g. [Ember.run#next docs](emberjs.com/api/classes/Ember.run.html#method_next)
+```javascript
+// Bad
+didInsertElement() {
+  this._super(...arguments);
+  Ember.run.next(() => {
+    this.processChildElements;
+  });
+}
+
+// Good
+didInsertElement() {
+  this._super(...arguments);
+  Ember.run.scheduleOnce('afterRender', this, 'processChildElements');
+}
+```
 
 ## Ember Data
 
