@@ -9,6 +9,7 @@ disagreements will be settled via trial by combat.
 
 + [Ember](https://github.com/DockYard/styleguides/blob/master/engineering/ember.md)
 + [Handlebars](https://github.com/DockYard/styleguides/blob/master/engineering/handlebars.md)
++ [CSS](https://github.com/DockYard/styleguides/blob/master/engineering/css.md)
 + [JavaScript](https://github.com/DockYard/styleguides/blob/master/engineering/javascript.md)
 + [Ruby](https://github.com/DockYard/styleguides/blob/master/engineering/ruby.md)
 + [Ruby on Rails](https://github.com/DockYard/styleguides/blob/master/engineering/rails.md)
