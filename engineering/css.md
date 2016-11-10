@@ -111,6 +111,10 @@ Finally, properties are what give the selected elements of a rule declaration th
   - Uses of z-index
   - Compatibility or browser-specific hacks
 
+### !important
+
+Never use `!important` in your rule declarations. It is an anti-pattern, and works by intentionally breaking the logic of CSS. It's a helpful shortcut, but can cause headaches down the road when you're trying to figure out why something is overriding the styles you write later down the road. Prefer more targeted selectors or, if necessary, more nested selectors to the use of `!important`.
+
 ### ID selectors
 
 While it is possible to select elements by ID in CSS, it should generally be considered an anti-pattern. ID selectors introduce an unnecessarily high level of [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) to your rule declarations, and they are not reusable.
