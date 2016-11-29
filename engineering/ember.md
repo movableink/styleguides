@@ -181,6 +181,7 @@ export default Component.extend({
   after computed properties.
 - Define your route/component/controller's action last, to provide a common
   place that actions can be found.
+- Use the `get` and `set` syntax over the function syntax when defining computed properties.
 
 ### Override init
 
@@ -219,8 +220,10 @@ export default Model.extend({
   children: hasMany('child'),
 
   // Computed Properties
-  fullName: computed('firstName', 'lastName', function() {
-    // Code
+  fullName: computed('firstName', 'lastName', {
+    get() {
+      // Code
+    }
   })
 });
 
